@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RemoveEmojiSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgZ-1q-fnU">
+                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjh-mt-lHU">
+                                <rect key="frame" x="20" y="58" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="removeEmojiButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Vq-R7-qbe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MT8-Bd-yyV">
+                                <rect key="frame" x="20" y="105" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nX5-R3-pzL">
+                                <rect key="frame" x="20" y="150" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jjh-mt-lHU" firstAttribute="top" secondItem="fgZ-1q-fnU" secondAttribute="bottom" constant="8" id="2qS-rJ-5O3"/>
+                            <constraint firstItem="MT8-Bd-yyV" firstAttribute="top" secondItem="Jjh-mt-lHU" secondAttribute="bottom" constant="17" id="9Ek-Gk-rBJ"/>
+                            <constraint firstItem="nX5-R3-pzL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CNz-3N-8Ne"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MT8-Bd-yyV" secondAttribute="trailing" id="MbV-o3-00S"/>
+                            <constraint firstItem="fgZ-1q-fnU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="U7j-um-pal"/>
+                            <constraint firstItem="MT8-Bd-yyV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dJ3-OM-IW9"/>
+                            <constraint firstItem="nX5-R3-pzL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hmD-BX-n7p"/>
+                            <constraint firstItem="fgZ-1q-fnU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ihr-oc-rpp"/>
+                            <constraint firstItem="nX5-R3-pzL" firstAttribute="top" secondItem="MT8-Bd-yyV" secondAttribute="bottom" constant="24" id="nw1-37-HsK"/>
+                            <constraint firstItem="Jjh-mt-lHU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="opt-kZ-2dq"/>
+                            <constraint firstItem="fgZ-1q-fnU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vp0-TS-TOr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="MT8-Bd-yyV" id="hx4-Zq-AV8"/>
+                        <outlet property="labelTwo" destination="nX5-R3-pzL" id="7A8-z9-R12"/>
+                        <outlet property="removeEmojiButton" destination="Jjh-mt-lHU" id="Dki-qh-DmY"/>
+                        <outlet property="textField" destination="fgZ-1q-fnU" id="3H0-DD-Hkc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509" y="376"/>
+        </scene>
+    </scenes>
+</document>
